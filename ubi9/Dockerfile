@@ -4,6 +4,8 @@ RUN microdnf install -y gzip tar
  
 COPY scripts/install-agent.sh /usr/local/bin/
 
+RUN chmod +x /usr/local/bin/install-agent.sh
+
 RUN /usr/local/bin/install-agent.sh
 
 ENTRYPOINT ["./sergen_x_agent"]
